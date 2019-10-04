@@ -11,4 +11,13 @@ public class Penny extends Currency {
     public Penny() {
         super(name, value, 1);
     }
+
+    @Override
+    public String toString() {
+        if (quantity == 1) {
+            return quantity + " " + name;
+        } else {
+            return quantity + " " + "Pennies";
+        }
+    }
 }

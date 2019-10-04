@@ -39,4 +39,13 @@ public abstract class Currency {
         this.value = value;
     }
 
+    @Override
+    public String toString() {
+        if (quantity == 1) {
+            return quantity + " " + name;
+        } else {
+            return quantity + " " + name + "s";
+        }
+    }
+
 }

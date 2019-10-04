@@ -13,5 +13,7 @@ public class Main {
         piggyBank.add(new Dime(7));
         piggyBank.add(new Dollar());
         piggyBank.add(new Penny(10));
+
+        piggyBank.forEach(c -> System.out.println(c));
     }
 }

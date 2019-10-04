@@ -11,4 +11,9 @@ public class Dollar extends Currency {
     public Dollar() {
         super(name, value, 1);
     }
+
+    @Override
+    public String toString() {
+        return "$" + quantity;
+    }
 }
