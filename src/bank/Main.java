@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Main {
+    public static double total = 0;
+
     public static void main(String[] args) {
         ArrayList<Currency> piggyBank = new ArrayList<Currency>();
         piggyBank.add(new Quarter());
@@ -14,6 +16,11 @@ public class Main {
         piggyBank.add(new Dollar());
         piggyBank.add(new Penny(10));
 
-        piggyBank.forEach(c -> System.out.println(c));
+        piggyBank.forEach(c -> {
+            total += c.getTotalValue();
+            System.out.println(c);
+        });
+
+        System.out.println("The piggy bank holds $" + total);
     }
 }
